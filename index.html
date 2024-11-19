@@ -65,11 +65,30 @@
 							<section class="posts">
 								<article>
 									<header>
-										<span class="date">November 1, 2024</span>
+										<span class="date">November 12, 2024</span>
+										<h2><a href="#">Week 2 update: Deep Dive</a></h2>
+									</header>
+									<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+									<p>In this project, we aim to be able to successfully heat a small sample of metal to a chosen temperature. We aim to not overshoot this temperature and also ensure that the sample maintains this temperature for a predetermined amount of time. This will be achieved using the Raspberry Pi as a controller. 
+										Timeline:
+										11/19 Functioning Heater, All necessary parts ordered
+										11/26 Functioning Laser Thermometer 
+										12/3 Ability to drive heater with Raspberry Pi
+										12/10 Final Design
+										In addition to the Raspberry Pi, we will be using a purchased induction heater circuit including the heater coil, a laser thermometer, and a breadboard equipped with a 5V relay for controlling the induction heater circuit. For software, it makes the most sense to code this in python so we can have a loop of code continuously running to monitor sample temperature. The code will be much less involved than the hardware and will consist of taking the readings from the laser thermometer and varying the output of a GPIO pin using PWM.
+										This project functions utilizing the Raspberry Pi as an embedded device. Although the induction heater itself can simply be powered with a standard DC power supply, our project differs in that we want to monitor and control the temperature of our sample. In order to accomplish this some form of embedded device is necessary in order to run code to perform this control.
+										</p>
+									<!-- <ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul> -->
+								</article>
+								<article>
+									<header>
+										<span class="date">November 5, 2024</span>
 										<h2><a href="#">Week 1 update</a></h2>
 									</header>
 									<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<p>In week one we focused on picking between two projects, a LoRa and TinyGS based sattelite tracker and display, and an induction based sample heater that is intelligently controlled by the raspberry pi. Due to the projects relevance to an M.Eng project and a clearer path forward we decided to proceed with the sample heater.</p>
 									<!-- <ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul> -->
