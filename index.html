@@ -55,7 +55,7 @@
 									<h2><a href="#">Where we're at</a></h2>
 									<p>The most up to date progress and data.</p>
 								</header>
-								<!-- <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a> -->
+								 <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a> 
 								<ul class="actions special">
 									<li><a href="#" class="button large">Show me</a></li>
 								</ul>
@@ -63,6 +63,20 @@
 
 						<!-- Posts -->
 							<section class="posts">
+								<article>
+									<header>
+										<span class="date">November 29, 2024</span>
+										<h2><a href="#">Week 3&4 update: GUI and Hardware testing</a></h2>
+									</header>
+									<span class="image fit"><img src="images/Screenshot 2024-11-28 at 2.22.26 PM.png" alt="" /></span>
+									<p>This week was focused on hardware testing and GUI development. We tested the heating coil for temperature increase and found that it is very significant, it may stay cooler than 100C with indefinite heating but so far in our tests it rose to 75C over a few minutes of off and on use. This shows that we may need to implement a maximum time for holding the sample at the desired temperature, this likely could be implemented as a coil on time that is tracked in the python script. To measure these temperatures we used the infrared thermometer that we plan to use in the project, serving as its own independent test, wired to the pi and sending data via I2C we had accurate data with a decent refresh rate.</p><p>
+									We also dove into the GUI development, creating a fully functional touch GUI that will allow the user to control the temperature effectively. One thing that is still missing is a stop button, however it may be an unnecessary addition to the program given that the sample can be removed at any time.
+
+									</p>
+									<!-- <ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul> -->
+								</article>
 								<article>
 									<header>
 										<span class="date">November 12, 2024</span>
