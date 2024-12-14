@@ -31,8 +31,7 @@
                             <li><a href="elements.html">Elements Reference</a></li> -->
                         </ul>
                         <ul class="icons">
-                            <li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-                            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://github.com/bryanpi8/ECE5725Website" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                         </ul>
                     </nav>
 
@@ -40,53 +39,310 @@
                 <div id="main">
                     <section class="post">
                         <header class="major">
-                            <h1>Parts needed<br />
+                            <h1>Build Guide<br />
                             </h1>
                         </header>
-                        <h2>Itemized</h2>
+                        <h2>Items Needed</h2>
 									<div class="table-wrapper">
 										<table>
 											<thead>
 												<tr>
+													<th>Item #</th>
 													<th>Name</th>
-													<th>Description</th>
 													<th>Price</th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>Raspberry Pi 4</td>
-													<td></td>
-													<td>50.00</td>
-												</tr>
-												<tr>
-													<td>Item 2</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item 3</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item 4</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item 5</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
+                                                <tr>
+													<td>Item 1</td>
+                                                    <td>Raspberry Pi 4</td>
+                                                    <td>50.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 2</td>
+                                                    <td>Capacitive PiTFT</td>
+                                                    <td>35.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 3</td>
+                                                    <td>Raspberry Pi extension cable and header</td>
+                                                    <td>2.99</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 4</td>
+                                                    <td>Raspberry Pi case</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 5</td>
+                                                    <td>1, 16G SD card for each team member</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 6</td>
+                                                    <td>Raspberry Pi power supply</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 7</td>
+                                                    <td>Lab 3 robot kit (deck, 2 DC motors, 2 wheels, Motor Controller, assembly hardware)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 8</td>
+                                                    <td>ZVS Induction Heater Circuit</td>
+                                                    <td>15.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Item 8</td>
+                                                    <td>Contact-Less Infrared Temperature Sensor IR Module</td>
+                                                    <td>16.99</td>
+                                                </tr>
+                                            </tbody>
 											<tfoot>
 												<tr>
 													<td colspan="2"></td>
-													<td>100.00</td>
+													<td>124.98</td>
 												</tr>
 											</tfoot>
 										</table>
+										<h3>Instructions</h3>
+										<dl>
+											<dt>Step 1</dt>
+											<dd>
+												<p>Collect all materials listed above, assemble the components as shown in the wiring diagram below. The thermometer should be connected as show in their diagram <a href="https://www.waveshare.com/wiki/Infrared_Temperature_Sensor">here.</a> Follow all instructions from their site to setup the Pi for use with the Raspberry Pi</p> The + lead from an external 12V power supply goes on one of the multimeter connections, and the + lead from the heating coil will attach to the other side. Physically assemble coil and temperature sensor so that the temp sensor is aiming between a small gap in the coil so it can directly see the sample inside the coil.
+											</dd>
+											
+											<span class="image fit"><img src="images/Screenshot 2024-12-13 213206.png" alt="" /></span>
+
+											<dt>Step 2</dt>
+											<dd><p>
+												Follow the instructions on Adafruits website to setup the Pi for the PiTFT. These instructions are very detailed and can be found <a href="https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi">here.</a>
+											</p></dd>
+
+											<dt>Step 3</dt>
+											<dd><p>
+												Download our repository code, <a href="https://github.com/bryanpi8/ECE5725Website">found here.</a> Extract the "FinalProject" folder from the master repository. This folder contains all necessary files to run our TempControl code.
+											</p></dd>
+											
+											<dt>Step 4</dt>
+											<dd><p>
+												Open the folder using:
+												<code>cd ~/PATHTOOURCODE</code></p><p>
+												Then run TempControl.py in a command line using this command:
+												<code>Sudo Python TempControl.py</code>
+											</p></dd>
+
+											<dt>Step 5</dt>
+											<dd><p>
+												Once running you should see a blue light turning on and off on the heating coil and hear the relay toggle as you adjust the temperature. This indicates that the system is working and attempting to maintain an accurate sample temperature. The control window should look like this:
+												<span class="image fit"><img src="images/Screenshot 2024-11-28 at 2.24.57 PM.png" alt="" /></span>
+											</p></dd>
+										</dl>
+										
+
+										<h2>Our Code</h2>
+									<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pygame</span><span style="color: #333333">,</span><span style="color: #0e84b5; font-weight: bold">pigame</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">pygame.locals</span> <span style="color: #008800; font-weight: bold">import</span> <span style="color: #333333">*</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">os</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">time</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">RPi.GPIO</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">GPIO</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">smbus</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">MLX90614</span> <span style="color: #008800; font-weight: bold">import</span> MLX90614
+
+<span style="color: #888888"># Initialize GPIO</span>
+GPIO<span style="color: #333333">.</span>setmode(GPIO<span style="color: #333333">.</span>BCM)
+chan_list<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">26</span>,<span style="color: #0000DD; font-weight: bold">21</span>,<span style="color: #0000DD; font-weight: bold">17</span>,<span style="color: #0000DD; font-weight: bold">22</span>,<span style="color: #0000DD; font-weight: bold">27</span>,<span style="color: #0000DD; font-weight: bold">23</span>)
+GPIO<span style="color: #333333">.</span>setup(chan_list, GPIO<span style="color: #333333">.</span>IN, pull_up_down<span style="color: #333333">=</span>GPIO<span style="color: #333333">.</span>PUD_UP)
+outlist<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">5</span>, <span style="color: #0000DD; font-weight: bold">6</span>, <span style="color: #0000DD; font-weight: bold">19</span>, <span style="color: #0000DD; font-weight: bold">13</span>)
+GPIO<span style="color: #333333">.</span>setup(outlist, GPIO<span style="color: #333333">.</span>OUT)
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">bailOutButton</span>(channel):
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;Quitting&quot;</span>)
+    GPIO<span style="color: #333333">.</span>cleanup()
+    pygame<span style="color: #333333">.</span>quit()
+    <span style="color: #008800; font-weight: bold">try</span>:
+        <span style="color: #008800; font-weight: bold">del</span>(pitft)
+    <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">pass</span>
+    quit()
+
+GPIO<span style="color: #333333">.</span>add_event_detect(<span style="color: #0000DD; font-weight: bold">17</span>, GPIO<span style="color: #333333">.</span>FALLING, callback<span style="color: #333333">=</span>bailOutButton, bouncetime<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">200</span>)
+
+<span style="color: #888888"># PID Variables</span>
+Kp <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">80</span>  <span style="color: #888888"># Proportional gain</span>
+Ki <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">0.0001</span>  <span style="color: #888888"># Integral gain</span>
+Kd <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">0.002</span>  <span style="color: #888888"># Derivative gain</span>
+
+previous_error <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+integral <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+
+<span style="color: #888888">### Display control</span>
+<span style="color: #888888"># Makes the program display on monitor with mouse if commented</span>
+os<span style="color: #333333">.</span>putenv(<span style="background-color: #fff0f0">&#39;SDL_VIDEODRV&#39;</span>,<span style="background-color: #fff0f0">&#39;fbcon&#39;</span>)
+os<span style="color: #333333">.</span>putenv(<span style="background-color: #fff0f0">&#39;SDL_FBDEV&#39;</span>, <span style="background-color: #fff0f0">&#39;/dev/fb1&#39;</span>)
+os<span style="color: #333333">.</span>putenv(<span style="background-color: #fff0f0">&#39;SDL_MOUSEDRV&#39;</span>,<span style="background-color: #fff0f0">&#39;dummy&#39;</span>)
+os<span style="color: #333333">.</span>putenv(<span style="background-color: #fff0f0">&#39;SDL_MOUSEDEV&#39;</span>,<span style="background-color: #fff0f0">&#39;/dev/null&#39;</span>)
+os<span style="color: #333333">.</span>putenv(<span style="background-color: #fff0f0">&#39;DISPLAY&#39;</span>,<span style="background-color: #fff0f0">&#39;&#39;</span>)
+<span style="color: #888888"># ~ pygame.mouse.set_visible(False)</span>
+
+<span style="color: #888888"># Initialize Pygame</span>
+pygame<span style="color: #333333">.</span>init()
+pitft <span style="color: #333333">=</span> pigame<span style="color: #333333">.</span>PiTft() <span style="color: #888888">### Comment to switch to monitor</span>
+lcd <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>display<span style="color: #333333">.</span>set_mode((<span style="color: #0000DD; font-weight: bold">320</span>, <span style="color: #0000DD; font-weight: bold">240</span>))
+lcd<span style="color: #333333">.</span>fill((<span style="color: #0000DD; font-weight: bold">0</span>,<span style="color: #0000DD; font-weight: bold">0</span>,<span style="color: #0000DD; font-weight: bold">0</span>))
+pygame<span style="color: #333333">.</span>display<span style="color: #333333">.</span>update()
+
+<span style="color: #888888"># Screen dimensions for TFT display</span>
+SCREEN_WIDTH <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">320</span>
+SCREEN_HEIGHT <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">240</span>
+
+<span style="color: #888888"># Colors</span>
+WHITE <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">255</span>, <span style="color: #0000DD; font-weight: bold">255</span>, <span style="color: #0000DD; font-weight: bold">255</span>)
+BLACK <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">0</span>)
+RED <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">255</span>, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">0</span>)
+BLUE <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">255</span>)
+GRAY <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">200</span>, <span style="color: #0000DD; font-weight: bold">200</span>, <span style="color: #0000DD; font-weight: bold">200</span>)
+
+
+<span style="color: #888888"># Fonts</span>
+pygame<span style="color: #333333">.</span>font<span style="color: #333333">.</span>init()
+font_large <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>font<span style="color: #333333">.</span>Font(<span style="color: #007020">None</span>, <span style="color: #0000DD; font-weight: bold">50</span>)
+font_small <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>font<span style="color: #333333">.</span>Font(<span style="color: #007020">None</span>, <span style="color: #0000DD; font-weight: bold">30</span>)
+
+<span style="color: #888888"># Initialize screen</span>
+screen <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>display<span style="color: #333333">.</span>set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame<span style="color: #333333">.</span>display<span style="color: #333333">.</span>set_caption(<span style="background-color: #fff0f0">&quot;Temperature Controller&quot;</span>)
+
+<span style="color: #888888"># Variables</span>
+current_temp <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">22</span>  <span style="color: #888888"># Placeholder for current temperature (Celsius)</span>
+target_temp <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">20</span>  <span style="color: #888888"># Target temperature (Celsius)</span>
+running <span style="color: #333333">=</span> <span style="color: #007020">True</span>
+MAX_TEMP <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">150</span>
+
+<span style="color: #888888"># Button dimensions and positions</span>
+button_increase <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>Rect((<span style="color: #0000DD; font-weight: bold">30</span>, <span style="color: #0000DD; font-weight: bold">160</span>), (<span style="color: #0000DD; font-weight: bold">60</span>, <span style="color: #0000DD; font-weight: bold">40</span>))  <span style="color: #888888"># Increase button</span>
+button_increase5 <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>Rect((<span style="color: #0000DD; font-weight: bold">100</span>, <span style="color: #0000DD; font-weight: bold">160</span>), (<span style="color: #0000DD; font-weight: bold">60</span>, <span style="color: #0000DD; font-weight: bold">40</span>))  <span style="color: #888888"># Increase button</span>
+
+button_decrease5 <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>Rect((<span style="color: #0000DD; font-weight: bold">180</span>, <span style="color: #0000DD; font-weight: bold">160</span>), (<span style="color: #0000DD; font-weight: bold">60</span>, <span style="color: #0000DD; font-weight: bold">40</span>))  <span style="color: #888888"># Decrease button</span>
+button_decrease <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>Rect((<span style="color: #0000DD; font-weight: bold">250</span>, <span style="color: #0000DD; font-weight: bold">160</span>), (<span style="color: #0000DD; font-weight: bold">60</span>, <span style="color: #0000DD; font-weight: bold">40</span>))  <span style="color: #888888"># Decrease button</span>
+
+<span style="color: #888888"># Function to draw the GUI</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">draw_gui</span>():
+    screen<span style="color: #333333">.</span>fill(BLACK)
+
+    <span style="color: #888888"># Display current temperature</span>
+    temp_text <span style="color: #333333">=</span> font_large<span style="color: #333333">.</span>render(f<span style="background-color: #fff0f0">&quot;Current: {current_temp:.1f}°C&quot;</span>, <span style="color: #007020">True</span>, WHITE)
+    temp_rect <span style="color: #333333">=</span> temp_text<span style="color: #333333">.</span>get_rect(center<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">160</span>, <span style="color: #0000DD; font-weight: bold">40</span>))
+    screen<span style="color: #333333">.</span>blit(temp_text, temp_rect)
+
+    <span style="color: #888888"># Display target temperature</span>
+    target_text <span style="color: #333333">=</span> font_large<span style="color: #333333">.</span>render(f<span style="background-color: #fff0f0">&quot;Target: {target_temp}°C&quot;</span>, <span style="color: #007020">True</span>, BLUE)
+    target_rect <span style="color: #333333">=</span> target_text<span style="color: #333333">.</span>get_rect(center<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">160</span>, <span style="color: #0000DD; font-weight: bold">100</span>))
+    screen<span style="color: #333333">.</span>blit(target_text, target_rect)
+
+    <span style="color: #888888"># Draw buttons</span>
+    pygame<span style="color: #333333">.</span>draw<span style="color: #333333">.</span>rect(screen, GRAY, button_increase)
+    pygame<span style="color: #333333">.</span>draw<span style="color: #333333">.</span>rect(screen, GRAY, button_increase5)
+    pygame<span style="color: #333333">.</span>draw<span style="color: #333333">.</span>rect(screen, GRAY, button_decrease)
+    pygame<span style="color: #333333">.</span>draw<span style="color: #333333">.</span>rect(screen, GRAY, button_decrease5)
+    
+    <span style="color: #888888"># Add button labels</span>
+    increase_text <span style="color: #333333">=</span> font_small<span style="color: #333333">.</span>render(<span style="background-color: #fff0f0">&quot;+1C&quot;</span>, <span style="color: #007020">True</span>, BLACK)
+    increase_text5 <span style="color: #333333">=</span> font_small<span style="color: #333333">.</span>render(<span style="background-color: #fff0f0">&quot;+5C&quot;</span>, <span style="color: #007020">True</span>, BLACK)
+    decrease_text <span style="color: #333333">=</span> font_small<span style="color: #333333">.</span>render(<span style="background-color: #fff0f0">&quot;-1C&quot;</span>, <span style="color: #007020">True</span>, BLACK)
+    decrease_text5 <span style="color: #333333">=</span> font_small<span style="color: #333333">.</span>render(<span style="background-color: #fff0f0">&quot;-5C&quot;</span>, <span style="color: #007020">True</span>, BLACK)
+    screen<span style="color: #333333">.</span>blit(increase_text, increase_text<span style="color: #333333">.</span>get_rect(center<span style="color: #333333">=</span>button_increase<span style="color: #333333">.</span>center))
+    screen<span style="color: #333333">.</span>blit(increase_text5, increase_text<span style="color: #333333">.</span>get_rect(center<span style="color: #333333">=</span>button_increase5<span style="color: #333333">.</span>center))
+    screen<span style="color: #333333">.</span>blit(decrease_text, decrease_text<span style="color: #333333">.</span>get_rect(center<span style="color: #333333">=</span>button_decrease<span style="color: #333333">.</span>center))
+    screen<span style="color: #333333">.</span>blit(decrease_text5, decrease_text<span style="color: #333333">.</span>get_rect(center<span style="color: #333333">=</span>button_decrease5<span style="color: #333333">.</span>center))
+
+    <span style="color: #888888"># Draw temperature bar</span>
+    bar_width <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">20</span>
+    bar_height <span style="color: #333333">=</span> SCREEN_HEIGHT
+    bar_x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+    bar_y <span style="color: #333333">=</span> <span style="color: #007020">round</span>((SCREEN_HEIGHT <span style="color: #333333">-</span> bar_height)<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>)
+
+    <span style="color: #888888"># Background bar</span>
+    pygame<span style="color: #333333">.</span>draw<span style="color: #333333">.</span>rect(screen, GRAY, (bar_x, bar_y, bar_width, bar_height))
+
+    <span style="color: #888888"># Fill current temperature proportionally (max temp = 50°C)</span>
+    filled_height <span style="color: #333333">=</span> <span style="color: #007020">int</span>((target_temp <span style="color: #333333">/</span> MAX_TEMP) <span style="color: #333333">*</span> bar_height)
+    fill_y <span style="color: #333333">=</span> bar_y <span style="color: #333333">+</span> bar_height <span style="color: #333333">-</span> filled_height  <span style="color: #888888"># Calculate the starting y-coordinate for the red fill</span>
+    pygame<span style="color: #333333">.</span>draw<span style="color: #333333">.</span>rect(screen, RED, (bar_x, fill_y, bar_width, filled_height))
+
+    pygame<span style="color: #333333">.</span>display<span style="color: #333333">.</span>update()
+
+sensor <span style="color: #333333">=</span> MLX90614()
+
+<span style="color: #888888"># Main loop</span>
+<span style="color: #008800; font-weight: bold">while</span> running:
+    pitft<span style="color: #333333">.</span>update() <span style="color: #888888">### Comment to switch to monitor</span>
+
+    <span style="color: #888888">#Read temperature from sensor (Commented Out)</span>
+    <span style="color: #008800; font-weight: bold">try</span>:
+        <span style="color: #888888"># ~ print(&quot;Ambient Temp:&quot;,round(sensor.get_amb_temp(),2),&quot;C&quot;)</span>
+        <span style="color: #888888"># ~ print(&quot; Object Temp:&quot;,round(sensor.get_obj_temp(),2),&quot;C\n&quot;)</span>
+        current_temp <span style="color: #333333">=</span> <span style="color: #007020">round</span>(sensor<span style="color: #333333">.</span>get_obj_temp(),<span style="color: #0000DD; font-weight: bold">2</span>)
+        <span style="color: #888888"># ~ time.sleep(0.2)</span>
+    <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">pass</span>
+    <span style="color: #888888"># ~ except Exception as e:</span>
+        <span style="color: #888888"># ~ print(f&quot;Error reading from sensor: {e}&quot;)</span>
+        <span style="color: #888888"># ~ current_temp = 0  # Fallback in case of sensor error</span>
+
+    draw_gui()
+
+    <span style="color: #008800; font-weight: bold">for</span> event <span style="color: #000000; font-weight: bold">in</span> pygame<span style="color: #333333">.</span>event<span style="color: #333333">.</span>get():
+        <span style="color: #008800; font-weight: bold">if</span> event<span style="color: #333333">.</span>type <span style="color: #333333">==</span> QUIT:
+            running <span style="color: #333333">=</span> <span style="color: #007020">False</span>
+
+        <span style="color: #888888"># Handle touchscreen input</span>
+        <span style="color: #008800; font-weight: bold">if</span> event<span style="color: #333333">.</span>type <span style="color: #333333">==</span> MOUSEBUTTONDOWN:
+            touch_pos <span style="color: #333333">=</span> pygame<span style="color: #333333">.</span>mouse<span style="color: #333333">.</span>get_pos()
+            <span style="color: #008800; font-weight: bold">if</span> target_temp <span style="color: #333333">&lt;=</span> <span style="color: #0000DD; font-weight: bold">150</span>:
+                <span style="color: #008800; font-weight: bold">if</span> button_increase<span style="color: #333333">.</span>collidepoint(touch_pos):
+                    target_temp <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                <span style="color: #008800; font-weight: bold">elif</span> button_increase5<span style="color: #333333">.</span>collidepoint(touch_pos):
+                    target_temp <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+            <span style="color: #008800; font-weight: bold">if</span> target_temp <span style="color: #333333">&gt;=</span> <span style="color: #0000DD; font-weight: bold">20</span>:
+                <span style="color: #008800; font-weight: bold">if</span> button_decrease<span style="color: #333333">.</span>collidepoint(touch_pos):
+                    target_temp <span style="color: #333333">-=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                <span style="color: #008800; font-weight: bold">elif</span> button_decrease5<span style="color: #333333">.</span>collidepoint(touch_pos):
+                    target_temp <span style="color: #333333">-=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+
+    <span style="color: #888888"># Simulate current temperature approaching the target for testing</span>
+    <span style="color: #008800; font-weight: bold">if</span> current_temp <span style="color: #333333">&lt;</span> target_temp:
+        current_temp <span style="color: #333333">+=</span> <span style="color: #6600EE; font-weight: bold">0.1</span>
+    <span style="color: #008800; font-weight: bold">elif</span> current_temp <span style="color: #333333">&gt;</span> target_temp:
+        current_temp <span style="color: #333333">-=</span> <span style="color: #6600EE; font-weight: bold">0.1</span>
+
+    <span style="color: #888888"># PID Control Logic</span>
+    error <span style="color: #333333">=</span> target_temp <span style="color: #333333">-</span> current_temp  <span style="color: #888888"># Calculate error</span>
+    integral <span style="color: #333333">+=</span> error                  <span style="color: #888888"># Accumulate integral</span>
+    derivative <span style="color: #333333">=</span> error <span style="color: #333333">-</span> previous_error  <span style="color: #888888"># Calculate derivative</span>
+    output <span style="color: #333333">=</span> Kp <span style="color: #333333">*</span> error <span style="color: #333333">+</span> Ki <span style="color: #333333">*</span> integral <span style="color: #333333">+</span> Kd <span style="color: #333333">*</span> derivative  <span style="color: #888888"># PID formula</span>
+
+    <span style="color: #888888"># Control relay based on PID output</span>
+    <span style="color: #008800; font-weight: bold">if</span> output <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>:  <span style="color: #888888"># Turn on heater if PID output is positive</span>
+        GPIO<span style="color: #333333">.</span>output(<span style="color: #0000DD; font-weight: bold">20</span>, GPIO<span style="color: #333333">.</span>HIGH)
+    <span style="color: #008800; font-weight: bold">else</span>:  <span style="color: #888888"># Turn off heater if PID output is negative or zero</span>
+        GPIO<span style="color: #333333">.</span>output(<span style="color: #0000DD; font-weight: bold">20</span>, GPIO<span style="color: #333333">.</span>LOW)
+
+    <span style="color: #888888"># Update previous error for next iteration</span>
+    previous_error <span style="color: #333333">=</span> error
+GPIO<span style="color: #333333">.</span>cleanup()
+pygame<span style="color: #333333">.</span>quit()
+<span style="color: #008800; font-weight: bold">del</span>(pitft) <span style="color: #888888">#comment to switch to monitor</span>
+</pre></div>
+
+									<h2>References</h2>
+											<ul class="alt">
+												<li><a href="https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi">Adafruit design resources</a></li>
+												<li><a href="https://www.waveshare.com/wiki/Infrared_Temperature_Sensor">Waveshare MLX90614 Guide</a></li>
+												<li><a href="https://www.pygame.org/docs/">PyGame Documentation</a></li>
+												<li>Joseph Skovira's Lab guides</li>
+											</ul>
 									</div>
                     </section>
                 </div>
@@ -114,25 +370,19 @@
 							</form>
 						</section>
 						<section class="split contact">
-							<section class="alt">
+							<!-- <section class="alt">
 								<h3>Address</h3>
 								<p>1234 Somewhere Road #87257<br />
 								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
+							</section> -->
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
+								<p><a href="#">bmp85@Cornell.edu</a>, <a href="#">jdc375@Cornell.edu</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
@@ -141,7 +391,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Bryan P and John C</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
